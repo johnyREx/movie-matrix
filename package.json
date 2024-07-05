@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/johnyREx/movie-matrix/issues"
   },
-  "homepage": "https://github.com/johnyREx/movie-matrix#readme"
+  "homepage": "https://github.com/johnyREx/movie-matrix#readme",
+  "dependencies": {
+    "boxicons": "^2.1.4",
+    "core-js": "^3.37.1",
+    "model.js": "^0.0.1",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.3",
+    "parcel-bundler": "^1.12.5"
+  }
 }

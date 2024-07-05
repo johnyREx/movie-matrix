@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- *********** SCRIPTS *********** -->
+
+    <script defer type="module" src="/src/scripts/controller.js"></script>
+
+    <!-- *********** BOX-ICONS *********** -->
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- *********** PHOSPHOR ICONS *********** -->
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <!-- *********** STYLE SHEETS *********** -->
+
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+
+    <!-- *********** GOOGLE FONTS *********** -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- *********** FAV ICON *********** -->
+
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico" />
+
+    <!-- *********** WEBSITE TITLE *********** -->
+
+    <title>Moviematrix</title>
+  </head>
+  <body>
+    <!-- *********** SIDEBAR NAVIGATION *********** -->
+
+    <nav class="movie-sidebar-nav">
+      <header class="sidebar-web-logo">
+        <figure class="logo-container">
+          <img src="/src/images/web-logo.png" class="logo-img" alt="" />
+          <figcaption class="logo-name">MOVIEMATRIX</figcaption>
+        </figure>
+      </header>
+
+      <div class="sidebar-buttons">
+        <div class="search-input-container">
+          <form
+            action="#"
+            data-type-btn="form-btn"
+            class="sidebar-form nav-form-btn"
+          >
+            <button class="sidebar-search-btn nav-search-btn">
+              <i class="bx bx-search-alt"></i>
+            </button>
+
+            <input
+              type="text"
+              class="sidebar-search-input"
+              placeholder="Search Movies..."
+              name=""
+              id=""
+            />
+          </form>
+
+          <h3 class="secondary-title">Search</h3>
+        </div>
+
+        <ul class="nav-lists sidebar-lists-btn">
+          <li class="nav-list sidebar-expansion-btn">
+            <a
+              data-page="expand"
+              data-type-btn="expand"
+              class="nav-btn sidebar-expand-btn"
+            >
+              <i class="bx bx-chevrons-right"></i>
+            </a>
+            <h3 class="secondary-title expand-secondary">Expand</h3>
+          </li>
+
+          <li class="nav-list">
+            <a data-page="home" class="nav-btn">
+              <i class="bx bx-home"></i>
+              <h3 class="nav-title">Home</h3>
+            </a>
+            <h3 class="secondary-title">Home</h3>
+          </li>
+
+          <li class="nav-list">
+            <a data-page="trending" class="nav-btn">
+              <i class="bx bxs-hot"></i>
+              <h3 class="nav-title">Trending</h3>
+            </a>
+            <h3 class="secondary-title">Trending</h3>
+          </li>
+
+          <li class="nav-list">
+            <a data-page="movies-pop" class="nav-btn">
+              <i class="bx bx-movie"></i>
+              <h3 class="nav-title">Movies</h3>
+            </a>
+            <h3 class="secondary-title">Movies</h3>
+          </li>
+
+          <li class="nav-list">
+            <a data-page="tvs-pop" class="nav-btn">
+              <i class="bx bx-tv"></i>
+              <h3 class="nav-title">TV's</h3>
+            </a>
+            <h3 class="secondary-title">TV Shows</h3>
+          </li>
+
+          <li class="nav-list">
+            <a data-page="bookmarks" class="nav-btn">
+              <i class="icon-bm bx bx-book-bookmark"></i>
+              <h3 class="nav-title">Bookmarks</h3>
+            </a>
+            <h3 class="secondary-title">Bookmarks</h3>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="sidebar-footer nav-list">
+        <a data-page="settings" class="nav-btn">
+          <i class="ph-gear settings-icon"></i>
+          <h3 class="nav-title">Settings</h3>
+        </a>
+        <h3 class="secondary-title">Settings</h3>
+      </footer>
+    </nav>
+
+    <div class="overlay-main"></div>
+
+    <!-- *********** SECTION 1 *********** -->
+
+    <section class="section-1">
+      <!-- *********** MOVIES SECTION HEADER *********** -->
+
+      <section class="section-header">
+        <header class="header-filter">
+          <h1 class="header-title">Discover Movies</h1>
+          <button class="header-filter-btn">genre</button>
+        </header>
+        <div class="header-btns-container">
+          <i class="bx bx-filter filter-icon-btn"></i>
+          <i class="bx bx-menu menu-btn"></i>
+        </div>
+
+        <div class="filter-btn-container">
+          <ul class="filters-btns">
+            <!-- <li class="filters-btn">Romance</li>
+            <li class="filters-btn">Action</li>
+            <li class="filters-btn">Horror</li>
+            <li class="filters-btn">Comedy</li>
+            <li class="filters-btn">Adventure</li>
+            <li class="filters-btn">Animation</li>
+            <li class="filters-btn">Sci-fi</li> -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- *********** MOVIES SECTION *********** -->
+
+      <main class="movie-main">
+        <div class="movie-cards">
+          <!-- <div class="movie-card">
+            <img
+              class="movie-img"
+              src="https://image.tmdb.org/t/p/w1280/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+              alt=""
+            />
+
+            <div class="overlay-card"></div>
+            <i class="bm-icon bx bxs-bookmark"></i>
+
+            <button data-card-id="333" class="expand-btn">
+              <i class="bx bx-expand expand-icon"></i>
+              <p>Expand</p>
+            </button>
+
+            <div class="movie-info">
+              <p class="movie-title">No Way home bro</p>
+            </div>
+          </div>
+
+          <div class="card img-card">
+            <i class="ph-icon ph-warning"></i>
+            <p class="img-unavailable-text">
+              Image <br />
+              Unavailable
+            </p>
+          </div> -->
+        </div>
+
+        <!-- *********** PAGINATION SECTION *********** -->
+
+        <section class="movie-pagination">
+          <!-- <div class="placeholder"></div>
+          <div class="loading-spinner"></div>
+          <div class="loading-spinner2"></div>
+
+          <button 
+          data-page-btn="first" 
+          class="pag-btns btn-arrow">< Page 1</button>
+
+          <button 
+          data-page-btn="back" 
+          class="pag-btns btn-arrow">< Back</button>
+
+          <button
+            data-page-btn="page-num"
+            data-page-num="3"
+            class="pag-btns btn-page-num active">3</button>
+
+          <button
+            data-page-btn="page-num"
+            data-page-num="3"
+            class="pag-btns btn-page-num active">3</button>
+
+          <button 
+          data-page-btn="next" 
+          class="pag-btns btn-arrow">Next ></button>
+
+          <button 
+          data-page-btn="last" 
+          class="pag-btns btn-arrow">Page 1000 ></button> -->
+        </section>
+        <!-- prettier-ignore -->
+        <footer class="copyright">
+          <p>
+            Copyright © 2024
+            <a class="copyright-user-link" 
+            target="_blank" 
+            href="https://twitter.com/TheJohnyRex">@Johny_Rex</a>. All Rights Reserved
+          </p>
+        </footer>
+      </main>
+    </section>
+
+    <!-- *********** SETTINGS *********** -->
+
+    <!-- prettier-ignore -->
+    <menu class="settings-container">
+      <header class="settings-header">
+        <h2 class="settings-header-title">Settings</h2>
+      </header>
+      <main>
+        <ul class="settings-lists">
+          <li class="settings-list">
+            <p class="settings-title">Dark mode</p>
+            <div
+              data-setting="dark-mode"
+              class="dark-mode-setting toggle-container toggler-list">
+              <a class="toggler-btn">
+                <div class="toggle-circle"></div>
+              </a>
+            </div>
+          </li>
+
+          <li class="settings-list">
+            <p class="settings-title">Disable transitions</p>
+            <div
+              data-setting="disable-transition"
+              class="disable-transition-setting toggle-container toggler-list">
+              <a class="toggler-btn">
+                <div class="toggle-circle"></div>
+              </a>
+            </div>
+          </li>
+
+          <li class="settings-list">
+            <p class="settings-title">Zoom transitions</p>
+            <div
+              data-setting="disable-zooms"
+              class="disable-zoom-setting toggle-container toggler-list">
+              <a class="toggler-btn">
+                <div class="toggle-circle"></div>
+              </a>
+            </div>
+          </li>
+
+          <li class="settings-list">
+            <p class="settings-title">Card zooming</p>
+            <mark class="experimental-txt">experimental</mark>
+            <div
+              data-setting="card-zooming"
+              class="card-zoom-setting toggle-container toggler-list">
+              <a class="toggler-btn">
+                <div class="toggle-circle"></div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="settings-footer">
+        <button class="btn btn-hv close-settings-btn">< close</button>
+      </footer>
+    </menu>
+
+    <!-- *********** EXPANSION PAGE *********** -->
+
+    <main class="section expansion-section">
+      <button class="btn btn-hv back-btn">< Back</button>
+      <div class="video-overview-container">
+        <!-- *********** MOVIE/TVs POSTER AND TRAILER SECTION*********** -->
+
+        <!-- <section class="video-section">
+          <div class="expand-sec video-trailer-container">
+            <button class="close-video active">x</button> -->
+
+        <!-- *********** POSTER CONTAINER*********** -->
+
+        <!-- <figure class="poster-container">
+              <img
+                class="video-poster-path"
+                src="https://image.tmdb.org/t/p/w1280/4YOpxmGyQZFELwLB7JqcpYKnmKw.jpg"
+                alt=""
+              />
+
+              <figure class="poster-desc-container">
+                <h1 id="main-poster-title" class="poster-title">Turning Red</h1>
+                <button class="btn btn-hv poster-btn watch-poster-btn">
+                  <i class="bx bx-play"></i>
+                  <p class="btn-title">Watch Trailer</p>
+                </button>
+              </figure>
+
+              <div class="overlay-poster"></div>
+            </figure> -->
+
+        <!-- *********** VIDEO TRAILER *********** -->
+
+        <!-- <iframe
+              class="trailer-video"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dLI4xgDBkRc"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section> -->
+
+        <!-- *********** GENRE TAGS *********** -->
+
+        <!-- <ul class="poster-genre-tags">
+          <li class="btn active cursor-def poster-genre-tag">Action</li>
+          <li class="btn active cursor-def poster-genre-tag">Comedy</li>
+          <li class="btn active cursor-def poster-genre-tag">Crime</li>
+        </ul> -->
+
+        <!-- *********** SECONDARY MOVIE/TVs TITLE *********** -->
+        <!-- 
+        <section class="secondary-poster-overview active">
+            <h1 class="poster-title">Turning Red</h1>
+        </section> -->
+
+        <!-- *********** MOVIE/TVs RATING AND OTHER INFO'S *********** -->
+
+        <!-- <section class="expand-sec movie-stats">
+          <article class="rating-container
+          flx flx-clmn flx-cntr">
+            <p class="rating-text">8.4</p>
+            <span class="rating-count">3,232</span>
+          </article>
+
+          <article class="other-details">
+            <time class="other-detail date-detail"><mark>Release Date:</mark> 2021-11-24</time>
+            <time class="other-detail duration-detail"><mark>Duration:</mark> 120min</time>
+            <p class="other-detail status-detail"><mark>Status:</mark> Released</p>
+          </article>
+
+          <button class="btn btn-md flx flx-cntr bookmark-btn">
+            <figure class="container-bookmark flx flx-cntr flx-gap-md">
+                <i class="icon-bm bx bx-book-bookmark"></i>
+                <figcaption class="bookmark-text">Bookmark</figcaption>
+            </figure>
+          </button>
+        </section>
+
+        <!-- *********** MOVIE/TVs DESCRIPTION *********** -->
+        <!-- 
+        <section class="expand-sec trailer-overview">
+          <article class="trailer-desc-container">
+            <p class="trailer-desc">
+              "Thirteen-year-old Mei is experiencing the awkwardness of being a
+              teenager with a twist – when she gets too excited, she transforms
+              into a giant red panda."
+            </p>
+          </article>
+        </section> -->
+
+        <!-- *********** CASTS SECTION *********** -->
+
+        <!-- <section class="casts-section">
+          <h2 class="cast-sec-title">Casts</h2>
+          
+          <div class="casts-container">
+            <figure class="cast-container">
+              <a
+                target="_blank"
+                href="https://www.google.com/search?q=galgadot"
+                class="flx flx-cntr flx-clmn picture-cicle"
+              >
+              <img
+              class="cast-picture"
+              src="https://image.tmdb.org/t/p/w1280/plLfB60M5cJrnog8KvAKhI4UJuk.jpg"
+              alt=""
+              />
+            </a>
+            <figcaption class="cast-name">Gal Gadot</figcaption>
+          </figure>
+
+            <figure class="cast-container">
+              <div class="flx flx-cntr flx-clmn picture-cicle">
+                <i class="ph-icon ph-warning"></i>
+                <p class="img-unavailable-text">
+                  Image <br />
+                  Unavailable
+                </p>
+              </div>
+              <figcaption class="cast-name">Gal Gadot</figcaption>
+            </figure>
+
+            <button class="show-casts-btn">
+              Show All <span>&rightarrow;</span>
+            </button>
+          </div>
+        </section> -->
+
+        <!-- *********** ALL CASTS SECTION *********** -->
+
+        <!-- <section class="all-casts-section">
+          <header class="all-casts-header">
+            <h2 class="all-casts-title">Casts</h2>
+          </header>
+          <div class="all-casts-container">
+            <figure class="cast-container">
+              <a
+                target="_blank"
+                href="https://www.google.com/search?q=galgadot"
+                class="flx flx-cntr flx-clmn picture-cicle"
+              >
+                <img
+                  class="cast-picture"
+                  src="https://image.tmdb.org/t/p/w1280/plLfB60M5cJrnog8KvAKhI4UJuk.jpg"
+                  alt=""
+                />
+              </a>
+              <figcaption class="cast-name">Gal Gadot</figcaption>
+            </figure>
+            <figure class="cast-container">
+              <a
+                target="_blank"
+                href="https://www.google.com/search?q=galgadot"
+                class="flx flx-cntr flx-clmn picture-cicle"
+              >
+                <img
+                  class="cast-picture"
+                  src="https://image.tmdb.org/t/p/w1280/plLfB60M5cJrnog8KvAKhI4UJuk.jpg"
+                  alt=""
+                />
+              </a>
+              <figcaption class="cast-name">Gal Gadot</figcaption>
+            </figure>
+            <figure class="cast-container">
+              <a
+                target="_blank"
+                href="https://www.google.com/search?q=galgadot"
+                class="flx flx-cntr flx-clmn picture-cicle"
+              >
+                <img
+                  class="cast-picture"
+                  src="https://image.tmdb.org/t/p/w1280/plLfB60M5cJrnog8KvAKhI4UJuk.jpg"
+                  alt=""
+                />
+              </a>
+              <figcaption class="cast-name">Gal Gadot</figcaption>
+            </figure>
+          </div>
+        </section> -->
+      </div>
+      <footer class="copyright">
+        <p>
+          Copyright © 2024
+          <a
+            class="copyright-user-link"
+            target="_blank"
+            href="https://twitter.com/TheJohnyRex"
+            >@Johny_Rex</a
+          >. All Rights Reserved
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
