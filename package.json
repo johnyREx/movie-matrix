@@ -11,7 +11,7 @@
     "url": "git+https://github.com/johnyREx/movie-matrix.git"
   },
   "author": "Johny Rex",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/johnyREx/movie-matrix/issues"
   },
