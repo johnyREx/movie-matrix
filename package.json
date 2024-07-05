@@ -1,0 +1,19 @@
+{
+  "name": "movie-matrix",
+  "version": "1.0.0",
+  "description": "Movies website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnyREx/movie-matrix.git"
+  },
+  "author": "Johny Rex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnyREx/movie-matrix/issues"
+  },
+  "homepage": "https://github.com/johnyREx/movie-matrix#readme"
+}
