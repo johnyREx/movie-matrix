@@ -1,0 +1,62 @@
+/**************** SECTIONS ***************/
+
+.section {
+    padding: 1rem;
+    padding-left: 6rem;
+  }
+  
+  /**************** BUTTONS STYLING ***************/
+  
+  .btn {
+    border: 1px solid var(--primary-accent-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--primary-accent-color);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-three-ms);
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .btn.cursor-def {
+    cursor: default;
+  }
+  
+  .btn.btn-md {
+    font-size: 1.1rem;
+  }
+  
+  .btn.btn-hv:hover {
+    background-color: var(--primary-accent-color);
+    color: white;
+  }
+  
+  .btn.active {
+    background-color: var(--primary-accent-color);
+    color: white;
+  }
+  
+  /**************** FLEX BOXES ***************/
+  
+  .flx {
+    display: flex;
+  }
+  
+  .flx.flx-cntr {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flx.flx-clmn {
+    flex-direction: column;
+  }
+  
+  .flx.flx-gap-sm {
+    gap: 0.5rem;
+  }
+  
+  .flx.flx-gap-md {
+    gap: 1rem;
+  }

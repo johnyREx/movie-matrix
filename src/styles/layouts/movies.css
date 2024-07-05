@@ -1,0 +1,195 @@
+/**************** MOVIE SECTION ***************/
+
+.movie-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: scroll;
+    padding: 1rem;
+    padding-bottom: 0;
+    gap: 1rem;
+    position: relative;
+    transition: var(--transition-three-ms);
+  }
+  
+  /**************** MOVIE CARDS ***************/
+  
+  .movie-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .movie-card {
+    max-width: 13rem;
+    max-height: 19.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .movie-card:hover .movie-info {
+    opacity: 1;
+    transform: translate(-50%, -110%);
+  }
+  
+  .movie-img {
+    max-width: 13rem;
+    max-height: 19.5rem;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .movie-info {
+    background-color: var(--tertiary-bg-color);
+    border-radius: 5px;
+    color: var(--primary-text-color-inverted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: var(--transition-three-ms);
+    transform: translate(-50%, -90%);
+    text-align: center;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    width: 95%;
+    padding: 1rem;
+    position: absolute;
+  }
+  
+  .movie-title {
+    font-size: 1rem;
+  }
+  
+  .overlay-card {
+    background-color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-three-ms);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .movie-card:hover .overlay-card {
+    opacity: 0.8;
+  }
+  
+  /**************** BOOKMARKED ICON ***************/
+  
+  .bm-icon {
+    display: none;
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--primary-accent-color);
+    z-index: 3;
+    top: -5px;
+    left: 0;
+  }
+  
+  .bm-icon.active {
+    display: block;
+  }
+  
+  /**************** EXPAND BUTTON ***************/
+  
+  .expand-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border-radius: 5px;
+    color: var(--primary-accent-color);
+    cursor: pointer;
+    gap: 0.3rem;
+    font-size: 1rem;
+    transition: var(--transition-three-ms);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .expand-icon {
+    fill: var(--primary-accent-color);
+    font-size: 1.5rem;
+    transition: var(--transition-three-ms);
+  }
+  
+  .movie-card:hover .expand-icon {
+    font-size: 1.6rem;
+  }
+  
+  .movie-expand {
+    font-size: 1rem;
+    transition: var(--transition-three-ms);
+  }
+  
+  .movie-card:hover .expand-btn {
+    opacity: 1;
+  }
+  
+  /**************** Copyright footer ***************/
+  
+  .copyright {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--footer-text-color);
+    border-top: 1px solid var(--footer-text-color);
+  }
+  
+  .copyright-user-link {
+    text-decoration: none;
+    position: relative;
+    color: var(--primary-accent-color);
+  }
+  
+  .copyright-user-link:after {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-accent-color);
+    transition: all 0.2s ease;
+  }
+  
+  .copyright-user-link:hover:after {
+    width: 100%;
+  }
+  
+  /**************** CARDS STYLING ***************/
+  
+  .card {
+    align-self: center;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 13rem;
+    max-height: 19.5rem;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .card-text {
+    color: var(--primary-text-color-inverted);
+    font-size: 1.2rem;
+    transition: var(--transition-three-ms);
+  }
+  
+  .card.img-card {
+    height: 100%;
+  }

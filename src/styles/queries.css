@@ -1,0 +1,158 @@
+@media screen and (max-width: 580px) {
+    /**************** SHRINKS EVERY ELEMENT ***************/
+  
+    html {
+      font-size: 80%;
+    }
+  
+    /**************** SECTIONS ***************/
+  
+    .section-1 {
+      padding-left: 0rem;
+    }
+  
+    .section {
+      margin: auto;
+      margin-left: 0;
+      padding: 1rem;
+    }
+  
+    /**************** MOVIE CARDS ***************/
+  
+    .movie-card:hover .movie-info {
+      opacity: 0;
+      transform: unset;
+    }
+  
+    /**************** SHOW SIDEBAR BUTTON ***************/
+  
+    .menu-btn,
+    .filter-icon-btn {
+      display: block;
+    }
+  
+    .header-filter-btn {
+      display: none;
+    }
+  
+    /**************** SIDEBAR ***************/
+  
+    .movie-sidebar-nav {
+      transform: translateX(-100%);
+      width: 15rem;
+    }
+  
+    .movie-sidebar-nav.active {
+      transform: unset;
+      width: 15rem;
+    }
+  
+    .sidebar-expand-btn {
+      opacity: 0;
+    }
+  
+    .sidebar-footer {
+      transform: translateY(-100%);
+      margin-top: unset;
+    }
+  
+    /**************** EXPAND SECTION ***************/
+  
+    .expand-sec {
+      flex-wrap: wrap;
+    }
+  
+    .video-trailer-container {
+      max-width: 100%;
+    }
+  
+    .trailer-overview {
+      width: 100%;
+    }
+    .trailer-desc-container {
+      width: 100%;
+    }
+  
+    .movie-stats {
+      width: 100%;
+    }
+  
+    .poster-title {
+      font-size: 2rem;
+    }
+  
+    .btn-title,
+    #main-poster-title {
+      display: none;
+    }
+  
+    .secondary-poster-overview {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 410px) {
+    .bookmark-btn {
+      position: relative;
+      align-self: start;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .movie-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .movie-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .header-title {
+      font-size: 1.8rem;
+    }
+    .settings-container {
+      width: 95vw;
+    }
+  
+    .error-msg span {
+      width: auto;
+    }
+  
+    .filter-btn-container {
+      height: 50vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 250px) {
+    .menu-btn,
+    .filter-icon-btn {
+      padding: 0.2rem;
+    }
+  
+    .movie-cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 200px) {
+    .section-header {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .header-btns-container {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  @media screen and (max-height: 550px) {
+    .movie-sidebar-nav {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }

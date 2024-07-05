@@ -1,0 +1,111 @@
+/**************** HEADER SECTION ***************/
+
+.section-header {
+    align-items: center;
+    color: var(--primary-text-color-inverted);
+    padding: 1rem;
+    padding-bottom: 0;
+    transition: var(--transition-three-ms);
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /**************** MENU BUTTON ***************/
+  
+  .header-btns-container {
+    display: flex;
+    align-self: flex-start;
+  }
+  
+  .menu-btn,
+  .filter-icon-btn {
+    border-radius: 50px;
+    transition: var(--transition-four-ms);
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-btn:active,
+  .filter-icon-btn:active {
+    background-color: var(--quartenary-bg-color);
+  }
+  
+  .filter-icon-btn {
+    color: var(--primary-accent-color);
+  }
+  
+  /**************** HEADER COMPONENTS STYLING ***************/
+  
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .header-filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-filter-btn {
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--primary-accent-color);
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-three-ms);
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .header-filter-btn:hover {
+    background-color: var(--secondary-accent-color);
+  }
+  
+  /**************** FILTER BUTTONS ***************/
+  
+  .filter-btn-container {
+    background-color: var(--secondary-bg-color);
+    position: absolute;
+    width: 90%;
+    top: 100%;
+    margin: 1rem;
+    border-radius: 5px;
+    padding: 1.5rem;
+    left: 0;
+    display: flex;
+    gap: 0.5rem;
+    pointer-events: none;
+    transform: translateY(-5%);
+    transition: var(--transition-three-ms);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .filters-btns {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filters-btn {
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary-accent-color);
+    color: var(--primary-accent-color);
+    cursor: pointer;
+    transition: var(--transition-three-ms);
+  }
+  
+  .filters-btn.active {
+    background-color: var(--primary-accent-color);
+    color: white;
+  }

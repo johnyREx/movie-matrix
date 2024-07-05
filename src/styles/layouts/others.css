@@ -1,0 +1,78 @@
+/**************** OVERLAY STYLING ****************/
+
+.overlay-main {
+    background-color: var(--primary-bg-color);
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-three-ms);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 4;
+  }
+  
+  .overlay-main.show {
+    opacity: 0.65;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  
+  /**************** ERROR MESSAGE STYLING ****************/
+  
+  .error-msg {
+    display: flex;
+    margin: auto;
+    gap: 0.5rem;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    font-size: 1.3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-msg span {
+    width: 50%;
+  }
+  
+  /**************** SHOW GENRE BUTTONS***************/
+  
+  .filter-btn-container.show {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: unset;
+    z-index: 999;
+  }
+  
+  /**************** SHOW SETTINGS ***************/
+  
+  .settings-container.show {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  /**************** EXPAND SIDEBAR ***************/
+  
+  .movie-sidebar-nav.active {
+    width: 15rem;
+  }
+  
+  /**************** SECTION SHRINKING ***************/
+  
+  .movie-main.shrink {
+    transform: scale(0.95);
+  }
+  
+  .section-header.shrink {
+    transform: scale(0.95);
+  }
+  
+  .movie-pagination.shrink {
+    transform: scale(0.95);
+  }
